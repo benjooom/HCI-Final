@@ -1,5 +1,5 @@
 async function loadImages() {
-    const response = await fetch('https://api.github.com/repos/benjooom/HCI-Final/contents/images');
+    const response = await fetch('https://api.github.com/repos/benjooom/HCI-Final/contents/gallery/images/');
     const data = await response.json();
     const imagesContainer = document.getElementById('images-container');
 
