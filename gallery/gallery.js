@@ -1,19 +1,21 @@
-document.addEventListener('DOMContentLoaded', () => {
-  loadImages();
-});
-
-async function loadImages() {
-  const response = await fetch('https://api.github.com/repos/benjooom/HCI-Final/contents/gallery/images/');
-  const data = await response.json();
-  const imagesContainer = document.getElementById('images-container');
-
-  data.forEach(image => {
-    if (image.type === 'file' && image.path.startsWith('images/')) {
-      const img = document.createElement('img');
-      img.src = image.download_url;
-      img.alt = image.name;
-      img.width = 200;
-      imagesContainer.appendChild(img);
-    }
-  });
+function loadImages() {
+  const baseURL = "https://api.github.com/repos/benjooom/HCI-Final/contents/images";
+  
+  fetch(baseURL)
+    .then(response => response.json())
+    .then(data => {
+      data.forEach(file => {
+        if (file.type === "file" && (file.name.endsWith(".jpg") || file.name.endsWith(".jpeg") || file.name.endsWith(".png") || file.name.endsWith(".gif"))) {
+          const imgElement = document.createElement("img");
+          imgElement.src = file.download_url;
+          imgElement.alt = file.name;
+          imgElement.style.width = "300px";
+          imgElement.style.margin = "10px";
+          document.getElementById("gallery").appendChild(imgElement);
+        }
+      });
+    })
+    .catch(error => {
+      console.error("Error fetching images:", error);
+    });
 }

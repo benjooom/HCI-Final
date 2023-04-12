@@ -5,16 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gallery</title>
     <link rel="stylesheet" href="gallery.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="gallery.js"></script>
   </head>
   <body>
-    <div id="images-container"></div>
-
-    <form id="mailing-list-form">
+    <h1>Gallery</h1>
+    <div id="gallery"></div>
+    <h2>Sign up to receive the completed artwork!</h2>
+    <form id="signup-form">
       <label for="email">Email:</label>
       <input type="email" id="email" name="email" required />
       <button type="submit">Sign up</button>
     </form>
+    <script>
+      $(document).ready(function () {
+        loadImages();
+      });
 
-    <script src="gallery.js"></script>
+      $("#signup-form").on("submit", function (event) {
+        event.preventDefault();
+        alert(
+          "Thank you for signing up! You will receive an email when your artwork is complete."
+        );
+        $("#email").val("");
+      });
+    </script>
   </body>
 </html>
