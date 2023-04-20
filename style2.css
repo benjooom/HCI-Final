@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  #instructions-container {
+    text-align: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px;
+  }
+  
+  #instructions-title {
+    font-family: "Grover", sans-serif;
+    font-size: 106pt;
+    color: white;
+    margin: 0;
+    text-align: right;
+  }
+  
+  #spacer-line {
+    border-top: 2px solid white;
+  }
+  
+  #instructions-body {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 37pt;
+    color: white;
+    text-align: left;
+    margin: 0;
+    padding-left: 5px;
+    display: inline-block;
+    width: 40%; /* updated */
+  }
+  
+  #instructions-icon {
+    display: inline-block;
+    vertical-align: top;
+    width: 32%; /* updated */
+  }
+  
