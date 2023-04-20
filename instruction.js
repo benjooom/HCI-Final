@@ -1,11 +1,25 @@
+// Get the element that represents the square
+const progressbar = document.getElementById('progress-bar');
+
+// Set the initial fill to 0%
+progressbar.style.background = 'linear-gradient(to top, #23A636 0%, transparent 0%)';
+
+// Function to update the fill of the square based on a percentage
+function updateSquareFill(percentage) {
+    progressbar.style.background = `linear-gradient(to top, #23A636 ${percentage}%, transparent ${percentage}%)`;
+}
+
+// Example usage: update the fill to 50%
+let fillPercentage = 0; // This could be any value between 0 and 100
+
+
+
+
 
 var DEBUG = true;
 
-var sec_rem = 15;
-
 var stroke_weight = 4;
-var body_scale = 0.2;
-var speed_sensitivity = 80; // value up => less likely white 
+var speed_sensitivity = 200; // value up => less likely white 
 var col_pair = ["#84773b", "#2c1c99"];
 
 // used to control if the screen is paused.
@@ -20,22 +34,11 @@ setTimeout(() => {
     trackingMgr.center = null;
 }, 15000);
 
-// pause demo
-// setTimeout(() => { is_paused = true; }, 5000);
-// setTimeout(() => { is_paused = false; prev = null; }, 10000);
 
-// save image demo
-// setTimeout(() => { saveCanvas(paint_canvas, 'myCanvas', 'jpg'); }, 30000); // save as file
-// setTimeout(() => { console.log(paint_canvas.elt.toDataURL()); }, 30000); // get base64 encode string
-let qr;
-function preload() {
-    qr = loadImage("images/qr-sample.jpg");
-}
 function setup() {
     paint_canvas = createCanvas(windowWidth, windowHeight);
-    // paint_canvas = createCanvas(800, 600);
     paint_canvas.parent("canvas-container");
-    frameRate(5);
+    frameRate(30);
     stroke("black");
     strokeWeight(stroke_weight);
     background('black');
@@ -43,23 +46,20 @@ function setup() {
 }
 
 function draw() {
+    // if (trackingMgr.isY()) {
+    if (mouseX > width / 2) {
+        fillPercentage += 100 / 2 / frameRate();
+    } else {
+        fillPercentage = 0;
+    }
+    updateSquareFill(fillPercentage);
+    if (fillPercentage > 100) {
+        window.location.href = 'canvas.html';
+    }
+
     if (is_paused) {
         return;
     }
-    sec_rem -= 1 / frameRate();
-    if (sec_rem < -1000) {sec_rem = 15;}
-    if (sec_rem < 0) {
-        is_paused = true;
-        image(qr, width/2, height / 2, width / 4, width / 4);
-        return;
-    }
-
-
-    fill(0);
-    rect(5, 30, 200, 50);
-    fill(255);
-    text(sec_rem, 10, 60);
-    
     var newData = trackingMgr.joints;
     if (newData.length > 0) {
 
