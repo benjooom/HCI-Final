@@ -18,12 +18,20 @@
     <h1>GALLERY</h1>
     <hr />
     <div id="gallery"></div>
-    <h2>Sign up to receive the completed artwork!</h2>
-    <form id="signup-form">
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required />
-      <button type="submit">Sign up</button>
-    </form>
+    <div style="display: flex; justify-content: center">
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSeHYWD11v_-1Q9gUdkjIS_Lz8KHeJbCfAx6PpngWgIAhzjqBQ/viewform?embedded=true"
+        width="640"
+        height="600"
+        frameborder="0"
+        marginheight="0"
+        marginwidth="0"
+        style="border: none"
+      >
+        Loading…
+      </iframe>
+    </div>
+
     <script>
       $(document).ready(function () {
         loadImages();
