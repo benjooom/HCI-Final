@@ -12,7 +12,7 @@ var is_paused = false;
 
 var prev;
 var paint_canvas;
-var bg_img;
+// var bg_img;
 
 var paint_center;
 
@@ -21,7 +21,7 @@ var human_sec = 0.0;
 
 function preload() {
     // preload() runs once
-    bg_img = loadImage('images/art1.jpg');
+    // bg_img = loadImage('images/art1.jpg');
 }
 
 function setup() {
