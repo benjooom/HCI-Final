@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <h1>Scan here to see the gallery!</h1>
+    <script src= "api.js">
+	</script>
+	<main>
+		<div id="qrcode"></div>
+	</main>
+	<script>
+		var qrcode = new QRCode("qrcode",
+		"https://benjooom.github.io/HCI-Final/");
+	</script>
+    <button onclick = "gitDownload({owner: 'benjooom',
+									repo: 'HCI-Final',
+									name: 'images/sharp-anarchy.png',
+									token: 'TOKEN'}).then(res =>
+									{
+										var imgElem = new Image();
+										imgElem.setAttribute('src', 'data:image/jpg;base64,' + res.content);
+										document.body.appendChild(imgElem);
+									})" > Click Me </button>
+</body>
+</html>
