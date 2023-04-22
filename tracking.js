@@ -1,5 +1,5 @@
-var host = "localhost:4444";
-// var host = "cpsc484-03.yale.internal:8888";
+// var host = "localhost:4444";
+var host = "cpsc484-01.yale.internal:8888";
 
 
 var trackingMgr = {
@@ -54,8 +54,6 @@ var trackingMgr = {
         });
     },
     isY: function (){
-        // console.log("L", (trackingMgr.joints[8][0] - trackingMgr.joints[2][0] < 0) && (trackingMgr.joints[8][1] - trackingMgr.joints[2][1] < 0))
-        // console.log("R", (trackingMgr.joints[15][0] - trackingMgr.joints[2][0] > 0) && (trackingMgr.joints[15][1] - trackingMgr.joints[2][1] < 0))
         if (trackingMgr.error != 0) {
             return false;
         }

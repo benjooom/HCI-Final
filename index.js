@@ -37,7 +37,7 @@ function setup() {
 }
 
 function draw() {
-    if (trackingMgr.error == 0) {
+if (trackingMgr.error == 0) {
         human_sec += 1.0 / frameRate();
     } else if (trackingMgr.error == 1) {
         //no people

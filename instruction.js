@@ -14,25 +14,29 @@ let fillPercentage = 0; // This could be any value between 0 and 100
 
 
 
+var no_human_sec = 0.0;
 
 
 var DEBUG = true;
 
 var stroke_weight = 4;
-var speed_sensitivity = 200; // value up => less likely white 
-var col_pair = ["#84773b", "#2c1c99"];
+var speed_sensitivity = 100; // value up => less likely white 
+// var col_pair = ["#84773b", "#2c1c99"];
 
 // used to control if the screen is paused.
 var is_paused = false;
 var prev = null;
 var paint_canvas;
 
-// For dev only. choose a draw with a col for 15 sec and change to another.
-var col = col_pair[0];
-setTimeout(() => {
-    col = col_pair[1];
-    trackingMgr.center = null;
-}, 15000);
+function getRandomArbitrary(min, max) {
+    return Math.floor(Math.random() * (max - min) + min);
+}
+
+var col = `rgb(${getRandomArbitrary(0, 255)},${getRandomArbitrary(0, 255)},${getRandomArbitrary(0, 255)})`;
+// setTimeout(() => {
+//     col = col_pair[1];
+//     trackingMgr.center = null;
+// }, 15000);
 
 
 function setup() {
@@ -46,8 +50,18 @@ function setup() {
 }
 
 function draw() {
-    // if (trackingMgr.isY()) {
-    if (mouseX > width / 2) {
+    if (trackingMgr.error == 0) {
+        no_human_sec = 0.0;
+    } else if (trackingMgr.error == 1) {
+        //no people
+        no_human_sec += 1.0 / frameRate();
+    }
+    if (no_human_sec >= 10) {
+        window.location.href = 'index.html';
+    }
+
+    if (trackingMgr.isY()) {
+    // if (mouseX > width / 2) {
         fillPercentage += 100 / 2 / frameRate();
     } else {
         fillPercentage = 0;
