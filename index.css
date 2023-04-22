@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .center {
+    text-align: center;
+  }
+  
+  h1 {
+    font-family: "Gill Sans", sans-serif;
+    font-size: 60px;
+    color: #ffffff;
+    text-shadow: 5px 5px 5px black;
+  }
+  
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    position: relative;
+    height: 100%;
+}
+
+.container div {
+    width: 100%;
+    height: 100%;
+}
+
+.div2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
