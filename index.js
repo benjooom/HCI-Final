@@ -1,5 +1,5 @@
 function loadImages() {
-  const baseURL = "https://api.github.com/repos/benjooom/HCI-Final/contents/images";
+  const baseURL = "https://api.github.com/repos/benjooom/HCI-Final/contents/images?ref=gh-pages";
   
   fetch(baseURL)
     .then(response => response.json())
