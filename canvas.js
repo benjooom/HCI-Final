@@ -239,7 +239,7 @@ function draw() {
     }
     fillPercentage = (init_time - sec_rem) / init_time * 100;
     updateSquareFill(fillPercentage);
-    $("#progress-bar").text(`Draw with your body! Time remaining: ${sec_rem.toFixed(1)}`);
+    $("#progress-bar").text(`One user at a time! Draw with your body! Time remaining: ${sec_rem.toFixed(1)}`);
 
     var newData = trackingMgr.joints;
     if (newData.length > 0) {
