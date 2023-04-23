@@ -1,5 +1,5 @@
 // var host = "localhost:4444";
-var host = "cpsc484-01.yale.internal:8888";
+var host = "cpsc484-02.yale.internal:8888";
 
 
 var trackingMgr = {
@@ -8,7 +8,7 @@ var trackingMgr = {
     center: null,
     error: -1,
     bodyId: null,
-    bodyScale: 0.3,
+    bodyScale: 0.4,
     init: function () {
         var url = "ws://" + host + "/frames";
         trackingMgr.socket = new WebSocket(url);
