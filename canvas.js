@@ -1,4 +1,3 @@
-const TOKEN = "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";
 const nums = document.querySelectorAll('.nums span');
 const counter = document.querySelector('.counter');
 const finalMessage = document.querySelector('.final');
