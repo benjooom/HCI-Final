@@ -57,7 +57,7 @@ var trackingMgr = {
         if (trackingMgr.error != 0) {
             return false;
         }
-        return (trackingMgr.joints[8][0] - trackingMgr.joints[2][0] < 0) && (trackingMgr.joints[8][1] - trackingMgr.joints[2][1] < 0) && (trackingMgr.joints[15][0] - trackingMgr.joints[2][0] > 0) && (trackingMgr.joints[15][1] - trackingMgr.joints[2][1] < 0);
+        return (trackingMgr.joints[8][0] - trackingMgr.joints[3][0] < 0) && (trackingMgr.joints[8][1] - trackingMgr.joints[3][1] < 0) && (trackingMgr.joints[15][0] - trackingMgr.joints[3][0] > 0) && (trackingMgr.joints[15][1] - trackingMgr.joints[3][1] < 0);
     },
 };
 
