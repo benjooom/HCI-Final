@@ -178,8 +178,8 @@ h4 {
     width: 40vh;
     height: 40vh;
     background-color: white;
-    border-radius: 1vh;
-    box-shadow: 0 0 1vh rgba(0, 0, 0, .2);
+    border-radius: 2vh;
+    box-shadow: 0 0 2vh rgba(0, 0, 0, .2);
 }
 
 #qrcode img {

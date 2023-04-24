@@ -62,7 +62,7 @@ function draw() {
 
     if (trackingMgr.isY()) {
     // if (mouseX > width / 2) {
-        fillPercentage += 100 / 2 / frameRate();
+        fillPercentage += 100 / 3 / frameRate();
     } else {
         fillPercentage = 0;
     }
