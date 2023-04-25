@@ -21,6 +21,7 @@ Julius Lin (jl3574):
 Benjamin Mehmedovic (bm746):
 
 Emily Cai (ec966):
+I wrote the HTML files for the 'Index' and 'Introduction' pages. I created the animated GIF for the start pose.
 
 Ziteng Jiao(zj89):
 I developed the tracking manager and the painting canvas.
