@@ -193,15 +193,15 @@ function draw() {
         is_paused = true;
 
         //Auxiliar graphics object
-        let resized = createGraphics(1280 / 2, 720 / 2)
+        let resized = createGraphics(1280, 720)
 
         //Draw and scale the canvas content
-        resized.image(paint_canvas, 0, 0, 1280 / 2, 720 / 2)
+        resized.image(paint_canvas, 0, 0, 1280, 720)
 
         //Manipulate the new pixels array
         resized.loadPixels()
         console.log(resized.pixels)
-        resizeCanvas(1280 / 2, 720 / 2)
+        resizeCanvas(1280, 720)
         // Draw the 28x28 just for visual feedback
         image(resized, 0, 0)
 
