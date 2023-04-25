@@ -17,6 +17,7 @@ Since our project requires tracking data from the `cpsc484-02.yale.internal:8888
 
 ## Collaboration Record
 Julius Lin (jl3574):
+I created the static page for gallery on GitHub, so that it reads from an images folder in real time to display the user-created artworks. I also embedded in the Google Form API into the page, so that the user can log their information to receive the final version of their artwork.
 
 Benjamin Mehmedovic (bm746):
 I created the GitHub upload/download functions using GET/POST commands in the GitHub API. I also added a QR code generator that is able to generate links to our gallery page. Both of these can be found in the api.js files. I also helped test and debug the display collaboratively with my team, resolving some of the bugs we found. The bugs were particularly related to the GitHub API and uploading/downloading files greater than 1 MB.
@@ -25,9 +26,10 @@ Emily Cai (ec966):
 I wrote the HTML files for the 'Index' and 'Introduction' pages. I also created the animated GIF demonstrating the start pose, to improve user experience and ensure a match between the system and real world. I collaborated with the team to test the display. I also would like to thank my other team member  Ziteng for implementing the more advanced code. The coding expertise of my teammates was invaluable for the completion of this project.
 
 Ziteng Jiao(zj89):
-I developed the tracking manager and the painting canvas.
-I merged the canvas with the `Index` and `Introduction` page developed by Emily.
+I developed the tracking manager and the painting canvas, which integrated into the `canvas.html`.
+I also integrated the canvas as the background of the `index.html` and `introduction.html` pages developed by Emily.
 I developed the timer and the logic to redirect between pages.
 I implements the image upload/download using the GitHub API wrapper function built by Ben.
-I tested the installation on the display.
+I collaborated with the team to test the installation on the display.
+I truly appreciate the valuable contributions, support, and feedback provided by my teammates throughout the project. Their insights and ideas greatly enhanced the final outcome of our collaboration.
 
