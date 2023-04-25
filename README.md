@@ -17,6 +17,7 @@ Since our project requires tracking data from the `cpsc484-02.yale.internal:8888
 
 ## Collaboration Record
 Julius Lin (jl3574):
+I created the static page for gallery on GitHub, so that it reads from an images folder in real time to display the user-created artworks. I also embedded in the Google Form API into the page, so that the user can log their information to receive the final version of their artwork.
 
 Benjamin Mehmedovic (bm746):
 I created the GitHub upload/download functions using GET/POST commands in the GitHub API. I also added a QR code generator that is able to generate links to our gallery page. I also helped test and debug the display with my team, resolving some of the bugs we found.
