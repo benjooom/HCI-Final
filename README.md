@@ -26,9 +26,10 @@ Emily Cai (ec966):
 I wrote the HTML files for the 'Index' and 'Introduction' pages. I created the animated GIF for the start pose. I collaborated with the team to test the display.
 
 Ziteng Jiao(zj89):
-I developed the tracking manager and the painting canvas.
-I merged the canvas with the `Index` and `Introduction` page developed by Emily.
+I developed the tracking manager and the painting canvas, which integrated into the `canvas.html`.
+I also integrated the canvas as the background of the `index.html` and `introduction.html` pages developed by Emily.
 I developed the timer and the logic to redirect between pages.
 I implements the image upload/download using the GitHub API wrapper function built by Ben.
-I tested the installation on the display.
+I collaborated with the team to test the installation on the display.
+I truly appreciate the valuable contributions, support, and feedback provided by my teammates throughout the project. Their insights and ideas greatly enhanced the final outcome of our collaboration.
 
