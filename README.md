@@ -19,6 +19,7 @@ Since our project requires tracking data from the `cpsc484-02.yale.internal:8888
 Julius Lin (jl3574):
 
 Benjamin Mehmedovic (bm746):
+I created the GitHub upload/download functions using GET/POST commands in the GitHub API. I also added a QR code generator that is able to generate links to our gallery page. I also helped test and debug the display with my team, resolving some of the bugs we found.
 
 Emily Cai (ec966):
 I wrote the HTML files for the 'Index' and 'Introduction' pages. I created the animated GIF for the start pose.
