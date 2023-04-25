@@ -1,6 +1,10 @@
-# A Plain HTML/JavaScript/CSS HCI Project Demo
+# An Interactive Collaborative Art Project Demo
 
-## Running
+## How to install dependencies and run the project 
+Since our project doesn't have a backend, so there's no need to install any dependencies.  
+To run the project, open `index.html` in a web browser.
+
+## Project Description
 
 The following dynamic art display allows users to draw on a shared canvas and build upon previous user drawings. The system tracks the user’s body and parses the direction and speed of the movements to create paint strokes on the canvas. The user's interaction time is controlled with a 30 second countdown timer. When the time is up, the system displays a QR code which links to an external website, where the user can download their artwork, view other people’s artworks, and sign up for a mailing list to receive the completed form of their artwork.
 
@@ -8,11 +12,21 @@ Tasks addressed:
 1. The installation uses the user's body as a paintbrush. The display parses user movements to determine the color of the paintstroke, depending on different body parts and speeds.
 2. The installation allows users to take their artwork home. The QR code allows the user to download their work in the form of a digital file.
 
+## Deployment Constraints
+Since our project requires tracking data from the `cpsc484-02.yale.internal:8888`, it should only work when connected to the Yale network.  
+Our app uses GitHub to store image data, whose API requires a TOKEN to run. The current TOKEN will expire in 1 month, so a new TOKEN is required to run the app at that time.  
 
-Open `index.html` in a Chrome web browser window.
+## Collaboration Record
+Julius Lin (jl3574):
 
-Add the following string to the end of the URL to connect to the server: `?ip=[Development_IP]:8888` where `[Development_IP]` is provided in the [Project 2 Tutorial](https://cpsc484-584-hci.gitlab.io/s21/project2_tutorial/#current-server-ips)
+Benjamin Mehmedovic (bm746):
 
-The demo will look like this once it's loaded:
+Emily Cai (ec966):
 
-![](docs/html-demo.jpg)
+Ziteng Jiao(zj89): 
+I developed the tracking manager and the painting canvas. 
+I merged the canvas with the `Index` and `Introduction` page developed by Emily. 
+I developed the timer and the logic to redirect between pages.
+I implements the image upload/download using the GitHub API wrapper function built by Ben.
+I tested the installation on the display.
+
